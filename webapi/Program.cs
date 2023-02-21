@@ -33,6 +33,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
+app.UseHttpsRedirection();
 app.InitSwaggerUI();
 app.AddRoutes();
 
